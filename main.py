@@ -63,3 +63,9 @@ def send_message(chat_id, text):
     response = requests.post(TELEGRAM_URL, json=payload)
     if response.status_code != 200:
         print(f"Telegram error: {response.text}")
+
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
