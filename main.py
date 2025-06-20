@@ -26,10 +26,16 @@ def webhook():
 
 def generate_manifest_reply(user_input):
     prompt = f"""
-User wrote: "{user_input}"
-Turn this into a positive manifestation or sign from the universe.
-Make it sound warm, magical, and affirming.
-"""
+    The user shared something that happened. Interpret it as a clear, exciting *sign* that their bigger goals are materializing—especially around success, money, freedom, and creativity.
+
+    🎯 Tone: Future-focused, confident, imaginative.
+    💬 Style: 1–2 punchy sentences, emotionally vivid.
+    ❌ Avoid: vague affirmations, abstract energy talk, or poetic metaphors.
+    You can compliment the user too
+    User event: "{user_input}"
+
+    What's the bigger sign or breakthrough this points to?
+    """
 
     headers = {
         "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
@@ -50,6 +56,9 @@ Make it sound warm, magical, and affirming.
         headers=headers,
         json=payload
     )
+    
+    print("DeepSeek response:", response.text)  # <-- Add this!
+
 
     result = response.json()
     return result['choices'][0]['message']['content'].strip()
