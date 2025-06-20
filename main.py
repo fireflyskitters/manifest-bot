@@ -25,12 +25,13 @@ def webhook():
     return 'ok'
 
 def generate_manifest_reply(user_input):
+    
     prompt = f"""
-    The user shared something that happened. Interpret it as a clear, exciting *sign* that their bigger goals are materializing—especially around success, money, freedom, and creativity.
+    The user shared something that happened. Interpret it as a clear, exciting *sign* that their bigger goals are materializing.
 
-    🎯 Tone: Future-focused, confident, imaginative.
-    💬 Style: 1–2 punchy sentences, emotionally vivid.
-    ❌ Avoid: vague affirmations, abstract energy talk, or poetic metaphors.
+    Tone: Future-focused, confident, imaginative.
+    Style: 1–2 punchy sentences, emotionally vivid.
+    Avoid: vague affirmations, abstract energy talk, or poetic metaphors.
     You can compliment the user too
     User event: "{user_input}"
 
