@@ -25,17 +25,18 @@ def webhook():
     return 'ok'
 
 def generate_manifest_reply(user_input):
-    
+
     prompt = f"""
-    The user shared something that happened. Interpret it as a clear, exciting *sign* that their bigger goals are materializing.
+    The user shared something that happened or something they did today.
+    Reflect this back as evidence that they already ARE the kind of person who gets what they want (e.g., successful, disciplined, attractive, wealthy, creative).
+    Frame each event as a "data point" that confirms their new, powerful identity.
+    Keep the tone natural, conversational, and varied—avoid repeating the same phrases.
+    Make it punchy and specific, no poetic metaphors or generic positivity.
+    Limit your reply to 1–2 sentences max.
 
-    Tone: Future-focused, confident, imaginative.
-    Style: 1–2 punchy sentences, emotionally vivid.
-    Avoid: vague affirmations, abstract energy talk, or poetic metaphors.
-    You can compliment the user too
-    User event: "{user_input}"
+    Event: "{user_input}"
 
-    What's the bigger sign or breakthrough this points to?
+    What does this prove about who they are becoming?
     """
 
     headers = {
