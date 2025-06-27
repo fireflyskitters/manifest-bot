@@ -28,7 +28,7 @@ def generate_manifest_reply(user_input):
 
     prompt = f"""
     The user shared something that happened or something they did today.
-    Reflect this back as evidence that they already ARE the kind of person who gets what they want (e.g., successful, disciplined, attractive, wealthy, creative).
+    Reflect this back as evidence that they already ARE the kind of person who gets what they want (can use an adjective, they are X).
     Frame each event as a "data point" that confirms their new, powerful identity.
     Keep the tone natural, conversational, and varied—avoid repeating the same phrases.
     Make it punchy and specific, no poetic metaphors or generic positivity.
